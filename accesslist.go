@@ -4,6 +4,7 @@ import (
 	"context"
 	"math/rand"
 
+	"gitlab.waterfall.network/waterfall/protocol/gwat"
 	"gitlab.waterfall.network/waterfall/protocol/gwat/common"
 	"gitlab.waterfall.network/waterfall/protocol/gwat/core/types"
 	"gitlab.waterfall.network/waterfall/protocol/gwat/ethclient/gethclient"
@@ -11,7 +12,7 @@ import (
 )
 
 func CreateAccessList(client *rpc.Client, tx *types.Transaction, from common.Address) (*types.AccessList, error) {
-	msg := ethereum.CallMsg{
+	msg := gwat.CallMsg{
 		From:       from,
 		To:         tx.To(),
 		Gas:        tx.Gas(),
@@ -25,7 +26,7 @@ func CreateAccessList(client *rpc.Client, tx *types.Transaction, from common.Add
 	return createAccessList(client, msg)
 }
 
-func createAccessList(client *rpc.Client, msg ethereum.CallMsg) (*types.AccessList, error) {
+func createAccessList(client *rpc.Client, msg gwat.CallMsg) (*types.AccessList, error) {
 	geth := gethclient.New(client)
 	al, _, _, err := geth.CreateAccessList(context.Background(), msg)
 	return al, err
