@@ -1,9 +1,9 @@
 package txfuzz
 
 import (
-	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/holiman/goevmlab/ops"
 	"github.com/holiman/goevmlab/program"
+	"gitlab.waterfall.network/waterfall/protocol/gwat/core/vm"
 )
 
 func selfdestructor() []byte {

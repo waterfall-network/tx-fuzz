@@ -3,7 +3,7 @@ package txfuzz
 import (
 	"math/rand"
 
-	"github.com/ethereum/go-ethereum/common"
+	"gitlab.waterfall.network/waterfall/protocol/gwat/common"
 )
 
 func randomHash() common.Hash {

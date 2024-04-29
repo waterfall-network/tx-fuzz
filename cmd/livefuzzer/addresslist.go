@@ -4,12 +4,12 @@ import (
 	"context"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethclient"
-	txfuzz "github.com/mariusvanderwijden/tx-fuzz"
+	txfuzz "github.com/waterfall-network/tx-fuzz"
+	"gitlab.waterfall.network/waterfall/protocol/gwat/accounts/abi/bind"
+	"gitlab.waterfall.network/waterfall/protocol/gwat/common"
+	"gitlab.waterfall.network/waterfall/protocol/gwat/core/types"
+	"gitlab.waterfall.network/waterfall/protocol/gwat/crypto"
+	"gitlab.waterfall.network/waterfall/protocol/gwat/ethclient"
 )
 
 var (
