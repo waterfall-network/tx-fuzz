@@ -1,6 +1,6 @@
 module github.com/waterfall-network/tx-fuzz
 
-go 1.21.9
+go 1.21
 
 require (
 	github.com/MariusVanDerWijden/FuzzyVM v0.0.0-20210904205340-da82a0d3e27a
